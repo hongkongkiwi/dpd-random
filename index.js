@@ -4,7 +4,7 @@
  */
 
 var Resource       = require('deployd/lib/resource'),
-    random         = require('node-random')
+    random         = require('random');
 
 /**
  * Module setup.
