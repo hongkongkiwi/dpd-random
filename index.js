@@ -15,7 +15,10 @@ function Random( options ) {
 
   Resource.apply( this, arguments );
 }
+
 util.inherits( Random, Resource );
+
+Random.prototype.clientGeneration = true;
 
 
 /**
