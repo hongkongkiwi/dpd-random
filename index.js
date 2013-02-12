@@ -4,6 +4,7 @@
  */
 
 var Resource       = require('deployd/lib/resource'),
+    util           = require('util'),
     random         = require('random');
 
 /**
