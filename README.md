@@ -10,3 +10,9 @@ Include in your package.json like
 <pre>
 npm install
 </pre>
+Usage in an Deployd-Event-Handler:
+<pre>
+dpd.random.get(function (randomstr) {
+    console.log(randomstr);
+}
+</pre>
