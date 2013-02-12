@@ -21,7 +21,7 @@ Random.basicDashboard = {
   settings: [
     {
       name        : 'length',
-      type        : 'number',
+      type        : 'numeric',
       description : 'Length of the random string. Defaults to 10.'
     }
   ]
