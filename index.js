@@ -25,7 +25,7 @@ Random.basicDashboard = {
       description : 'Length of the random string. Defaults to 10.'
     }
   ]
-}
+};
 
 /**
  * Module methodes
