@@ -27,16 +27,14 @@ Random.prototype.clientGeneration = true;
 
 Random.prototype.handle = function ( ctx, next ) {
 
-  console.log(random);
-
   var options = {};
   var randomCallback = function(string){
-    console.log("Response Data: "+string);
-    ctx.done( null, { message : string } );
+    console.log("Response Data: " + string);
+    ctx.done( null, { message : string[0] } );
   }
   var errorCallback = function(type, code, string){
     console.log("RANDOM.ORG Error: Type: "+type+", Status Code: "+code+", Response Data: "+string);
-    return ctx.done("something went wrong");
+    ctx.done("something went wrong");
   }
   random.generateStrings(randomCallback, options, errorCallback);
 };
