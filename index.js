@@ -27,18 +27,22 @@ Random.prototype.clientGeneration = true;
 
 Random.prototype.handle = function ( ctx, next ) {
 
+  console.log(random);
+  console.log(random.strings);
+
   random.strings({
     "length": 10,
     "number": 1,
     "upper": false,
     "digits": false
-  },
-  function( err, response ) {
-    if ( err ) {
-      return ctx.done( err );
+    },
+    function( err, response ) {
+      if ( err ) {
+        return ctx.done( err );
+      }
+      ctx.done( null, { message : response[0] } );
     }
-    ctx.done( null, { message : response[0] } );
-  });
+  );
 };
 
 /**
