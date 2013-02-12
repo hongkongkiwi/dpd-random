@@ -1,5 +1,7 @@
 dpd-random
 ===============
+Very simple module for creation of ramdom strings.
+
 Include in your package.json like
 <pre>
   "dependencies": {
