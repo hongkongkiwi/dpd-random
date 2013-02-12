@@ -30,7 +30,7 @@ Random.prototype.handle = function ( ctx, next ) {
   var options = {};
   var randomCallback = function(string){
     console.log("Response Data: " + string);
-    ctx.done( null, { message : string[0] } );
+    ctx.done( null, string[0] );
   }
   var errorCallback = function(type, code, string){
     console.log("RANDOM.ORG Error: Type: "+type+", Status Code: "+code+", Response Data: "+string);
