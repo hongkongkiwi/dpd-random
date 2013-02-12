@@ -1,6 +1,6 @@
 dpd-random
 ===============
-Very simple module for creation of ramdom strings.
+Very simple Deployd Resource for the creation of random strings.
 
 Include in your package.json like
 <pre>
