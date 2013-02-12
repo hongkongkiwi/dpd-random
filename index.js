@@ -28,21 +28,17 @@ Random.prototype.clientGeneration = true;
 Random.prototype.handle = function ( ctx, next ) {
 
   console.log(random);
-  console.log(random.strings);
 
-  random.strings({
-    "length": 10,
-    "number": 1,
-    "upper": false,
-    "digits": false
-    },
-    function( err, response ) {
-      if ( err ) {
-        return ctx.done( err );
-      }
-      ctx.done( null, { message : response[0] } );
-    }
-  );
+  var options = {};
+  var randomCallback = function(string){
+    console.log("Response Data: "+string);
+    ctx.done( null, { message : string } );
+  }
+  var errorCallback = function(type, code, string){
+    console.log("RANDOM.ORG Error: Type: "+type+", Status Code: "+code+", Response Data: "+string);
+    return ctx.done("something went wrong");
+  }
+  random.generateStrings(randomCallback, options, errorCallback);
 };
 
 /**
