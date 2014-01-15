@@ -16,5 +16,5 @@ Usage in an Deployd-Event-Handler:
 <pre>
 dpd.random.get(function (randomstr) {
     console.log(randomstr);
-}
+})
 </pre>
